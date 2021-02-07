@@ -20,10 +20,10 @@ if (isLocal) {
 }
 
 export const Layout: React.FC<DocHeadProps> = (props) => {
-  useEffect(() => {
-    // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
-    document.body.removeAttribute("style")
-  }, [])
+  // useEffect(() => {
+  //   // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
+  //   document.body.removeAttribute("style")
+  // }, [])
 
   return (
     <>
