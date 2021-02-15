@@ -10,7 +10,7 @@ const colorModes = {
 const nextMode = (currentColorMode: string): string => {
   const modes = Object.keys(colorModes)
 
-  // take the first mode after the current one.
+  // Iterate through the keys defined in `colorModes`
   const nextMode = modes.reduce<string | boolean>((prev, current) => {
     if (typeof prev === "string") return prev
     if (prev) return current
@@ -18,7 +18,7 @@ const nextMode = (currentColorMode: string): string => {
     return false
   }, false)
   if (typeof nextMode !== "string") {
-    console.warn("you did a bug >:/")
+    console.warn("you did a bug >:|")
     return "default"
   }
   return nextMode
@@ -45,7 +45,8 @@ const ThemeToggle: React.FC = () => {
       }}
     >
       <Button
-        sx={{ bg: "gray", py: 1, px: 2, fontSize: 3, minWidth: 75 }}
+        variant="outline"
+        sx={{ py: 1, px: 2, fontSize: 3, minWidth: 75 }}
         onClick={(_e) => {
           setColorMode(nextMode(colorMode))
         }}
