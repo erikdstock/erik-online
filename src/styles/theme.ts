@@ -37,6 +37,7 @@ export const theme: ThemeType = {
     heading: 1.25,
   },
   colors: {
+    initialColorModeName: "light",
     // My colors: primary, secondary, background, text,
     text: "#1b1e21",
     background: "#fff",
